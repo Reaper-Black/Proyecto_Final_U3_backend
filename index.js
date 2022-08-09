@@ -3,13 +3,17 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const AnswerSchema = require("./routesModels");
-const PollSchema = require("../backend/routes/Models");
+// const AnswerSchema = require("./routes/Models");
+// const PollSchema = require("./routes/Models");
+const models = require('./routes/Models');
 require("dotenv").config();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use("/models", AnswerSchema, PollSchema);
+
+// app.use("/Answer", AnswerSchema);
+app.use("/", models);
+
 
 const mongoUri = process.env.MONGODB_URI;
 
