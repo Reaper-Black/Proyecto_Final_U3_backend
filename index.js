@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 // const AnswerSchema = require("./routes/Models");
 // const PollSchema = require("./routes/Models");
-const models = require('./routes/Models');
+const models = require('./routes/app');
 require("dotenv").config();
 
 app.use(cors());
