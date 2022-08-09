@@ -1,13 +1,10 @@
 const express = require('express')
-const mongoose = require('mongoose')
-const { Poll, Answer } = require('./models')
-const cors = require('cors')
+const { Poll, Answer } = require('../models/models')
 const bodyParser = require("body-parser");
 const app = express()
 
 app.use(express.json())
-app.use(bodyParser.json());
-app.use(cors())
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
     res.end('This is the backend')
@@ -41,10 +38,4 @@ app.post('/polls/:pollId/votes/:answerId', async (req, res) => {
         res.json(result)
 })
 
-mongoose.connect('mongodb://localhost:3002', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
-    console.log('Connected to MongoDB')
-})
-
-app.listen(3001, () => {
-    console.log('Listening to http://localhost:3001')
-})
+module.exports = app;

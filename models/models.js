@@ -20,3 +20,5 @@ module.exports = {
     Poll,
     Answer
 }
+
+module.exports = mongoose.model("models", AnswerSchema, PollSchema);
