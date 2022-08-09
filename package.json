@@ -1,12 +1,22 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "description": "Backend for our react application",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
     "develop": "nodemon src/index.js"
+  }, "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reaper-Black/Proyecto_Final_U3_backend.git"
   },
+  "author": "Andres Chacon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reaper-Black/Proyecto_Final_U3_backend/issues"
+  },
+  "homepage": "https://github.com/Reaper-Black/Proyecto_Final_U3_backend#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
